@@ -1,0 +1,68 @@
+@media screen and (min-width: 768px) {
+  $headerUnit: calc($baseUnit * 2.5);
+
+  header {
+    section.header-text {
+      padding: $baseUnit;
+      flex-basis: 60%;
+
+      & h1 {
+        width: 75%;
+        font-size: $headerUnit;
+        line-height: $headerUnit;
+      }
+
+      & p {
+        font-size: calc($baseUnit * 1.25);
+      }
+    }
+
+    ul.rating-list {
+      width: fit-content;
+      & .rating {
+        @include flex(row);
+        justify-content: flex-start;
+        gap: calc($baseUnit * 1.5);
+        padding: $baseUnit calc($baseUnit * 1.5);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    @include flex(row);
+    gap: $baseUnit;
+    min-height: 60vh;
+
+    section.header-text {
+      text-align: left;
+      align-items: flex-start;
+      max-width: calc($maxCardWidth * 1.1);
+
+      h1 {
+        width: 70%;
+      }
+    }
+
+    ul.rating-list {
+      flex-basis: 40%;
+      transform: translateX(calc($ratingCardTranslate * -1));
+
+      & .rating {
+        width: max-content;
+        padding: calc($baseUnit * 0.9) calc($baseUnit * 1.5);
+
+        &:nth-of-type(1) {
+          transform: translateX(calc($ratingCardTranslate * 0));
+        }
+        &:nth-of-type(2) {
+          transform: translateX(calc($ratingCardTranslate * 1));
+        }
+        &:nth-of-type(3) {
+          transform: translateX(calc($ratingCardTranslate * 2));
+        }
+      }
+    }
+  }
+}

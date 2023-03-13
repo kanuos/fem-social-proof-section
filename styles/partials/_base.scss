@@ -6,3 +6,11 @@ $primary-2: hsl(333, 80%, 67%);
 $neutral-1: hsl(303, 10%, 53%);
 $neutral-2: hsl(300, 24%, 96%);
 $neutral-3: hsl(0, 0%, 100%);
+
+// units
+$baseUnit: 15px;
+$headerUnit: calc($baseUnit * 2);
+$ratingUnit: calc($baseUnit * 0.75);
+
+$maxCardWidth: calc($baseUnit * 30); // 30em equivalent
+$ratingCardTranslate: 10%;

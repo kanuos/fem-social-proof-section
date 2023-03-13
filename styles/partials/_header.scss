@@ -1,0 +1,69 @@
+@import "./mixins";
+
+header {
+  @include flex(column);
+  padding: calc($baseUnit * 3) calc($baseUnit * 2);
+  gap: calc($baseUnit * 2);
+
+  // header text
+  section.header-text {
+    @include flex(column);
+    gap: calc($baseUnit * 1.25);
+    text-align: center;
+    padding: $baseUnit;
+    max-width: $maxCardWidth;
+
+    & h1 {
+      font-weight: 700;
+      font-size: $headerUnit;
+      color: $primary-1;
+      line-height: $headerUnit;
+      width: 90%;
+    }
+
+    & p {
+      color: $neutral-1;
+      font-size: calc($baseUnit * 1.1);
+    }
+  }
+
+  // header rating list
+  ul.rating-list {
+    @include flex(column);
+    list-style: none;
+    width: 100%;
+    gap: $baseUnit;
+
+    // list item - li
+    .rating {
+      width: 100%;
+      background-color: $neutral-2;
+      border-radius: calc($baseUnit * 0.5);
+      padding: $ratingUnit;
+      @include flex(column);
+      gap: $ratingUnit;
+      max-width: $maxCardWidth;
+
+      // unordered list - ul
+      &__stars {
+        @include flex(row);
+        list-style: none;
+        gap: calc($baseUnit * 0.5);
+
+        img {
+          display: block;
+          object-fit: contain;
+          height: calc($baseUnit * 0.85);
+          width: auto;
+          aspect-ratio: 1 / 1;
+        }
+      }
+
+      strong {
+        font-size: calc($baseUnit * 0.9);
+        color: $primary-1;
+        font-weight: 700;
+      }
+    }
+  }
+}
