@@ -9,8 +9,11 @@ $neutral-3: hsl(0, 0%, 100%);
 
 // units
 $baseUnit: 15px;
-$headerUnit: calc($baseUnit * 2);
+$headerUnit: calc($baseUnit * 2.5);
 $ratingUnit: calc($baseUnit * 0.75);
 
 $maxCardWidth: calc($baseUnit * 30); // 30em equivalent
 $ratingCardTranslate: 10%;
+
+// container size
+$container: 80rem;

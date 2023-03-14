@@ -1,0 +1,59 @@
+// ul tag
+.review-list {
+  @include flex(column);
+  gap: $baseUnit;
+  padding: calc($baseUnit * 3) calc($baseUnit * 2);
+  list-style: none;
+
+  // li tag
+  .review {
+    @include flex(column);
+    gap: calc($baseUnit * 1.5);
+    background-color: $primary-1;
+    padding: $headerUnit;
+    border-radius: calc($baseUnit * 0.5);
+    max-width: $maxCardWidth;
+
+    &__user {
+      @include flex(row);
+      gap: $baseUnit;
+      justify-content: flex-start;
+      width: 100%;
+
+      .user {
+        &__img {
+          border-radius: 50%;
+          display: block;
+          height: calc($baseUnit * 2.5);
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+        }
+        &__info {
+          @include flex(column);
+          align-items: flex-start;
+
+          h2 {
+            font-size: $baseUnit;
+            font-weight: 700;
+            color: $neutral-2;
+
+            & + span {
+              font-size: $baseUnit;
+              font-weight: 500;
+              color: $primary-2;
+              opacity: .75;
+            }
+          }
+        }
+      }
+    }
+
+    blockquote {
+      color: $neutral-2;
+      opacity: .9;
+      font-size: calc($baseUnit * 1.125);
+      line-height: calc($baseUnit * 1.5);
+    }
+  }
+}
+
