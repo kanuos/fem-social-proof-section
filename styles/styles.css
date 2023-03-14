@@ -141,6 +141,44 @@ header ul.rating-list .rating strong {
   line-height: 22.5px;
 }
 
+footer.attribution {
+  position: absolute;
+  pointer-events: none;
+  z-index: -999;
+  transform: translate(-999%, -999%) scale(0);
+  opacity: 0;
+}
+
+main {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+main::before, main::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  height: 50vh;
+  width: 90vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+main::before {
+  top: 0;
+  left: 0;
+  background-image: url(../../images/bg-pattern-top-mobile.svg);
+  background-position: top;
+}
+main::after {
+  bottom: 0;
+  right: 0;
+  background-image: url(../../images/bg-pattern-bottom-mobile.svg);
+  background-position: bottom;
+}
+
 @media screen and (min-width: 768px) {
   header section.header-text {
     padding: 15px;
@@ -179,6 +217,16 @@ header ul.rating-list .rating strong {
   }
   .review-list .review:nth-of-type(2) {
     margin-left: auto;
+  }
+  main::before, main::after {
+    width: 60vw;
+    height: 80vh;
+  }
+  main::before {
+    background-image: url(../../images/bg-pattern-top-desktop.svg);
+  }
+  main::after {
+    background-image: url(../../images/bg-pattern-bottom-desktop.svg);
   }
 }
 @media screen and (min-width: 1024px) {

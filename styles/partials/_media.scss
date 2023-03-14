@@ -43,6 +43,21 @@
       margin-left: auto;
     }
   }
+
+  // pattern styles
+  main {
+    &::before,
+    &::after {
+      width: 60vw;
+      height: 80vh;
+    }
+    &::before {
+      background-image: url(../../images/bg-pattern-top-desktop.svg);
+    }
+    &::after {
+      background-image: url(../../images/bg-pattern-bottom-desktop.svg);
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
