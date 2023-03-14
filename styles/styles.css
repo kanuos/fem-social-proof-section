@@ -68,7 +68,7 @@ header ul.rating-list .rating__stars {
 header ul.rating-list .rating__stars img {
   display: block;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   height: 12.75px;
   width: auto;
   aspect-ratio: 1/1;
@@ -114,7 +114,7 @@ header ul.rating-list .rating strong {
   height: 37.5px;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .review-list .review__user .user__info {
   display: flex;
@@ -156,7 +156,8 @@ main {
   min-height: 100dvh;
   overflow-x: hidden;
 }
-main::before, main::after {
+main::before,
+main::after {
   position: absolute;
   content: "";
   pointer-events: none;
@@ -169,13 +170,13 @@ main::before, main::after {
 main::before {
   top: 0;
   left: 0;
-  background-image: url("/images/bg-pattern-top-mobile.svg");
+  background-image: url("../images/bg-pattern-top-mobile.svg");
   background-position: top;
 }
 main::after {
   bottom: 0;
   right: 0;
-  background-image: url("/images/bg-pattern-bottom-mobile.svg");
+  background-image: url("../images/bg-pattern-bottom-mobile.svg");
   background-position: bottom;
 }
 
@@ -218,15 +219,16 @@ main::after {
   .review-list .review:nth-of-type(2) {
     margin-left: auto;
   }
-  main::before, main::after {
+  main::before,
+  main::after {
     width: 60vw;
     height: 80vh;
   }
   main::before {
-    background-image: url("/images/bg-pattern-top-desktop.svg");
+    background-image: url("../images/bg-pattern-top-desktop.svg");
   }
   main::after {
-    background-image: url("/images/bg-pattern-bottom-desktop.svg");
+    background-image: url("../images/bg-pattern-bottom-desktop.svg");
   }
 }
 @media screen and (min-width: 1024px) {
@@ -283,4 +285,4 @@ main::after {
   .review-list .review:nth-of-type(3) {
     transform: translateY(10%);
   }
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
