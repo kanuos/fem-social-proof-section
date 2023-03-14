@@ -52,10 +52,10 @@
       height: 80vh;
     }
     &::before {
-      background-image: url("../../images/bg-pattern-top-desktop.svg");
+      background-image: url("/images/bg-pattern-top-desktop.svg");
     }
     &::after {
-      background-image: url("../../images/bg-pattern-bottom-desktop.svg");
+      background-image: url("/images/bg-pattern-bottom-desktop.svg");
     }
   }
 }

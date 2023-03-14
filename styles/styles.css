@@ -169,13 +169,13 @@ main::before, main::after {
 main::before {
   top: 0;
   left: 0;
-  background-image: url("../../images/bg-pattern-top-mobile.svg");
+  background-image: url("/images/bg-pattern-top-mobile.svg");
   background-position: top;
 }
 main::after {
   bottom: 0;
   right: 0;
-  background-image: url("../../images/bg-pattern-bottom-mobile.svg");
+  background-image: url("/images/bg-pattern-bottom-mobile.svg");
   background-position: bottom;
 }
 
@@ -223,10 +223,10 @@ main::after {
     height: 80vh;
   }
   main::before {
-    background-image: url("../../images/bg-pattern-top-desktop.svg");
+    background-image: url("/images/bg-pattern-top-desktop.svg");
   }
   main::after {
-    background-image: url("../../images/bg-pattern-bottom-desktop.svg");
+    background-image: url("/images/bg-pattern-bottom-desktop.svg");
   }
 }
 @media screen and (min-width: 1024px) {
